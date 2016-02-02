@@ -1,0 +1,68 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "inoutputsStore",
+        "designer|userClassName": "inoutputsStore",
+        "model": "inoutputsModel",
+        "pageSize": 750,
+        "storeId": "inoutputsStore"
+    },
+    "name": "MyStore",
+    "designerId": "8a046ea6-c24c-4bb4-9f1f-f094162ff08e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "create: 'querys.php?action=create&tag=inoutputs',",
+                    "read: 'querys.php?action=read&tag=inoutputs',",
+                    "update: 'querys.php?action=update&tag=inoutputs',",
+                    "destroy: 'querys.php?action=delete&tag=inoutputs'",
+                    "}"
+                ]
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "36284d83-7d68-47d4-8b59-50924ad081a5",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "rows",
+                        "totalProperty": "total_rows"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "8f97436b-d025-41f4-b26c-89406b5c45a8"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "writeAllFields": true
+                    },
+                    "name": "MyJsonWriter",
+                    "designerId": "09d91bc7-457e-43fc-bab5-c4c477b60959"
+                }
+            ]
+        }
+    ]
+}

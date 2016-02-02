@@ -1,0 +1,55 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "hhbMainController"
+        ],
+        "models": [
+            "inoutputsModel",
+            "profileModel"
+        ],
+        "name": "hhb",
+        "stores": [
+            "inoutputsStore",
+            "profileStore"
+        ],
+        "views": [
+            "main",
+            "inoutputs",
+            "editprofil",
+            "newInOut"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "if (Ext.isIE){",
+                    "    (elem=document.getElementById('loading')).parentNode.removeChild(elem);",
+                    "    (elem=document.getElementById('loading-mask')).parentNode.removeChild(elem);",
+                    "}else{",
+                    "    document.getElementById('loading').remove();",
+                    "    document.getElementById('loading-mask').remove();",
+                    "}",
+                    "Ext.getStore('profileStore').load();"
+                ]
+            },
+            "name": "launch",
+            "designerId": "f71a49d2-8ae2-42c0-a28e-0eccbd584109"
+        }
+    ]
+}

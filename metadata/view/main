@@ -1,0 +1,433 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "main",
+        "designer|userClassName": "main",
+        "itemId": "myviewport",
+        "layout": "border",
+        "scrollable": true
+    },
+    "name": "MyViewport",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "0c4a021c-6238-48a3-a61f-d441350439b3",
+    "viewControllerInstanceId": "bd74a084-3d6d-4e40-a2ea-a781406ccb6f",
+    "viewModelInstanceId": "4d575a76-9a49-49fe-8674-bbd93449d20a",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyStyle": [
+                    "'background:#04B431;'"
+                ],
+                "height": 45,
+                "html": "<div style='font-weight:bold;font-size:22px;color:white;font-family:Calibri;padding-top:0px;'><img src='resources/images/home.png' style='padding-top:8px;padding-left:8px;' width=32px height=32px>&nbsp;&nbsp;Mein Haushaltsbuch</div>",
+                "iconCls": "",
+                "layout|region": "north",
+                "style": "background:#04B431",
+                "title": null
+            },
+            "name": "MyPanel",
+            "configAlternates": {
+                "html": "string",
+                "style": "string",
+                "scrollable": "boolean"
+            },
+            "designerId": "32ac74a2-5d96-4c78-b4fb-f355ab4c1dd3",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "height": 35,
+                        "hidden": true,
+                        "style": "background:#04B431"
+                    },
+                    "name": "MyToolbar",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "f1bf32d6-30a7-431a-8e3c-d658733ef32a",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "name": "MyFill",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "95047d92-67ea-493b-8f03-516b0d43bfac"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0,
+                "defaults": null,
+                "itemId": "tabpan",
+                "layout|flex": 1,
+                "layout|region": "center"
+            },
+            "name": "MyTabPanel",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "eb8be60e-cb38-4b3b-add2-32f9f3cd3ecb",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyStyle": [
+                            "'background:#E6E6E6;'"
+                        ],
+                        "iconCls": "fa fa-binoculars",
+                        "itemId": "overview",
+                        "title": "&Uuml;bersicht"
+                    },
+                    "name": "MyPanel1",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "b62cd8ac-2cd8-453b-8dce-2b4ecd53212e",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": null
+                            },
+                            "name": "TabConfig",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "ae68d242-e19a-41d7-a67c-fb77b5b09de9"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Aktueller Kontostand",
+                                "htmlEncode": true,
+                                "itemId": "kontostand",
+                                "labelWidth": 350,
+                                "margin": "30 15 15 35",
+                                "style": null,
+                                "value": "2200,00 €"
+                            },
+                            "name": "MyDisplayField",
+                            "configAlternates": {
+                                "style": "string",
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "d9dd666e-6bec-41ea-80d0-afe7fcd54678"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Bevorstehende Buchungen",
+                                "labelWidth": 350,
+                                "margin": "30 15 15 35",
+                                "value": "-205,00 &euro;"
+                            },
+                            "name": "MyDisplayField2",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "90d3af17-9108-49f5-8ee5-b0d8dd9539d7"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyStyle": [
+                            "'background:#E6E6E6;'"
+                        ],
+                        "itemId": "details",
+                        "title": "Einzelheiten"
+                    },
+                    "name": "MyPanel2",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "a19921a9-57c2-4cda-b9b2-ef00cc9ad0db",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "fa fa-tasks"
+                            },
+                            "name": "TabConfig1",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "f358142a-416b-4ce8-a6c9-3d8e041adc05"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyStyle": [
+                    "'background:#E6E6E6;'"
+                ],
+                "iconCls": "fa fa-sliders",
+                "itemId": "settings",
+                "layout|margins": null,
+                "layout|region": "west",
+                "layout|split": true,
+                "scrollable": true,
+                "title": "Verwaltung",
+                "width": 200
+            },
+            "name": "MyPanel4",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "d9fedf2b-45b0-4f3d-bbaa-739ee021eea5",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "fa fa-exchange",
+                        "itemId": "in_and_outputs",
+                        "margin": null,
+                        "style": [
+                            "{",
+                            "color: 'white'",
+                            "}"
+                        ],
+                        "text": "Ein- und Ausg&auml;nge verwalten",
+                        "width": "100%"
+                    },
+                    "name": "MyButton4",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "57ead6e5-404a-47ea-8c7a-640a4c08559f"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "fa fa-credit-card",
+                        "itemId": "edit_accounts",
+                        "margin": null,
+                        "style": [
+                            "{",
+                            "color: 'white'",
+                            "}"
+                        ],
+                        "text": "Konten verwalten",
+                        "width": "100%"
+                    },
+                    "name": "MyButton3",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "128f6bd6-fcf6-4434-ab95-c4d90f72f362"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "fa fa-list-ul",
+                        "itemId": "edit_cat",
+                        "style": [
+                            "{",
+                            "color: 'white'",
+                            "}",
+                            ""
+                        ],
+                        "text": "Kategorien bearbeiten",
+                        "width": "100%"
+                    },
+                    "name": "MyButton2",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "a4d74e5e-2652-4660-aa4e-978663bd1ac4"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "fa fa-wrench",
+                        "itemId": "profil_edit",
+                        "style": [
+                            "{",
+                            "color: 'white'",
+                            "}"
+                        ],
+                        "text": "Profil editieren",
+                        "width": "100%"
+                    },
+                    "name": "MyButton1",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "5e8ad355-57b1-4d66-9666-1392f8662bd0"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "fa fa-question",
+                        "itemId": "help",
+                        "style": [
+                            "{",
+                            "color: 'white'",
+                            "}"
+                        ],
+                        "text": "Hilfe",
+                        "width": "100%"
+                    },
+                    "name": "MyButton11",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "b9cf45b7-761f-4e0c-80cb-103c116c997f",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onHelpClick",
+                                "implHandler": [
+                                    "window.open('/help/de/help_german.pdf');"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onHelpClick",
+                            "designerId": "759131c1-6f88-4664-b340-bd358cfaf3a2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "fa fa-sign-out",
+                        "itemId": "logout",
+                        "style": [
+                            "{",
+                            "color: 'white'",
+                            "}"
+                        ],
+                        "text": null,
+                        "width": "100%"
+                    },
+                    "name": "MyButton",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "e4c4813e-ca9a-4c38-b8f2-0a2963ab111a"
+                }
+            ]
+        }
+    ]
+}

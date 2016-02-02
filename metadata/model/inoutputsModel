@@ -1,0 +1,121 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "inoutputsModel",
+        "designer|userClassName": "inoutputsModel"
+    },
+    "name": "MyModel",
+    "designerId": "a1b4917f-b3b4-4d8f-b141-997398039fbe",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyString3",
+            "designerId": "2d1527e4-b397-48c5-aa41-8025cd54fe3f"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyString",
+            "designerId": "f1bdc95a-b260-425d-b78f-2a84990a2922"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid"
+            },
+            "name": "MyInteger1",
+            "designerId": "0e7762c2-edcf-4dd5-9d9f-58ffe9fa4497"
+        },
+        {
+            "type": "Ext.data.field.Boolean",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "booked"
+            },
+            "name": "MyBoolean",
+            "designerId": "b2997876-3a68-4c7d-89e5-1d3ccc682749"
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "amount"
+            },
+            "name": "MyNumber",
+            "designerId": "c0ee0196-0dc1-4db7-bd27-826793003132"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "currency"
+            },
+            "name": "MyString4",
+            "designerId": "2a770b6b-38dc-438b-905a-d92757f6b079"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "timestamp"
+            },
+            "name": "MyString1",
+            "designerId": "02e71a6a-30f7-46e3-84fb-3673a7b6a4b5"
+        },
+        {
+            "type": "Ext.data.field.Date",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "d.m.Y",
+                "name": "date"
+            },
+            "name": "MyDate",
+            "designerId": "cbac5da4-28d9-457d-9b6f-566d8d5d5954"
+        }
+    ]
+}

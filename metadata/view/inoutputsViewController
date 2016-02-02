@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "inoutputs",
+        "designer|userClassName": "inoutputsViewController"
+    },
+    "designerId": "10a4fcfc-7363-42c0-bf66-ff96d9566688"
+}

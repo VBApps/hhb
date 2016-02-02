@@ -1,0 +1,318 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "allowDeselect": true,
+        "columnLines": true,
+        "designer|userAlias": "inoutputs",
+        "designer|userClassName": "inoutputs",
+        "emptyText": "Keine Datens&auml;tze vohanden",
+        "forceFit": true,
+        "height": null,
+        "id": "inoutputs",
+        "itemId": "inoutputs",
+        "reference": "inoutputs",
+        "scrollable": true,
+        "store": "inoutputsStore",
+        "title": null,
+        "width": null
+    },
+    "name": "MyGridPanel",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "76b7ecaa-feaf-4def-9066-5a052334d980",
+    "viewControllerInstanceId": "10a4fcfc-7363-42c0-bf66-ff96d9566688",
+    "viewModelInstanceId": "4bb2d85e-6a35-4008-8457-9d3638f7b809",
+    "cn": [
+        {
+            "type": "Ext.grid.column.Check",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "booked",
+                "hidden": true,
+                "stopSelection": false,
+                "text": null,
+                "width": 60
+            },
+            "name": "MyCheck",
+            "designerId": "8837e694-33f9-4e60-9bd6-7082653bed46"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "id",
+                "text": "Nummer"
+            },
+            "name": "MyColumn",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "8c223326-89d3-4020-959e-dbbdb70e2e4c"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "name",
+                "flex": 1,
+                "text": "Verwendungszweck"
+            },
+            "name": "MyColumn1",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "48b3f2b7-b56d-40cf-90f6-9cb104256134"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "amount",
+                "text": "Betrag"
+            },
+            "name": "MyColumn2",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "817676ca-3e1f-4a0f-afe0-c64290a2f8de",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "fn": "renderer",
+                        "implHandler": [
+                            "return value + ' ' + record.data.currency;"
+                        ]
+                    },
+                    "name": "renderer",
+                    "designerId": "04ec152e-5198-486d-bfaa-6a4224362749"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Date",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "date",
+                "text": "Datum"
+            },
+            "name": "MyDateColumn",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "839a804d-b131-4619-abb7-02d23290e714"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "booked",
+                "text": "gebucht"
+            },
+            "name": "MyColumn3",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "eb2a81c8-4f13-47a3-99d0-a57e9748a8e2",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "fn": "renderer",
+                        "implHandler": [
+                            "if (value) {",
+                            "    return '<img src=\"resources/icons/accept.png\" style=\"display: block;margin: 0 auto;\">';",
+                            "} else {",
+                            "    return '<img src=\"resources/icons/stop.png\" style=\"display: block;margin: 0 auto;\">';",
+                            "}"
+                        ]
+                    },
+                    "name": "renderer",
+                    "designerId": "bc482205-0d3c-4726-84e3-ff5bdff29817"
+                }
+            ]
+        },
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyGridView",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "2e2a766b-b0da-408c-a3e2-db4e02451e35"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "defaults": [
+                    "{",
+                    "scale: 'medium'",
+                    "}"
+                ],
+                "dock": "top",
+                "style": [
+                    "'background:#e8e8e8;'"
+                ]
+            },
+            "name": "MyToolbar1",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "701ef5b1-32b8-4158-b4cb-e31df70143bd",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "fa fa-refresh fa-2x",
+                        "itemId": "btnrefresh",
+                        "layout|flex": null,
+                        "style": [
+                            "{",
+                            "color: 'blue'",
+                            "}"
+                        ],
+                        "text": null
+                    },
+                    "name": "MyButton5",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "023fefaa-c670-4b4e-ba30-542ea0710b8d"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "fa fa-plus-circle fa-2x",
+                        "itemId": "newinout",
+                        "layout|flex": null,
+                        "style": [
+                            "{",
+                            "color: 'green'",
+                            "}"
+                        ],
+                        "text": "Hinzuf&uuml;gen"
+                    },
+                    "name": "MyButton12",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "e5baf951-56e2-4c65-a04c-22f6a5a8bd45"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bind": [
+                            "{\"disabled\":\"{!inoutputs.selection}\"}"
+                        ],
+                        "disabled": true,
+                        "height": 35,
+                        "iconCls": "fa fa-minus-circle fa-2x",
+                        "layout|flex": null,
+                        "style": [
+                            "{",
+                            "color: 'red'",
+                            "}"
+                        ],
+                        "text": "Entfernen"
+                    },
+                    "name": "MyButton6",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "760b71b8-fe76-4173-9206-e3fcc87a17d8",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "bind",
+                            "type": "object"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

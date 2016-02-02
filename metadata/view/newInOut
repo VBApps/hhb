@@ -1,0 +1,188 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|userAlias": "newInOut",
+        "designer|userClassName": "newInOut",
+        "fieldDefaults": [
+            "{",
+            "        msgTarget: 'under'",
+            "    }"
+        ],
+        "height": null,
+        "id": "newInOut",
+        "itemId": "newInOut",
+        "title": null,
+        "width": null
+    },
+    "name": "MyForm",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "c959c265-22fb-4d9b-bcfa-939099096c69",
+    "viewControllerInstanceId": "2c262dc5-befe-4f12-8ecd-c433e24812a6",
+    "viewModelInstanceId": "5cc117bb-6033-43ff-9717-d2f50eb99b97",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "emptyText": "Reisekosten",
+                "fieldLabel": "Bezeichnung/Verwendungszweck*",
+                "itemId": "inouttypeofuse",
+                "labelWidth": 200,
+                "layout|anchor": "100%",
+                "name": "inoutname"
+            },
+            "name": "MyTextField4",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "4f2ccd7a-ee2a-4a1e-9da4-7415d2c3739c"
+        },
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "emptyText": "250,00",
+                "fieldLabel": "Betrag in Euro*",
+                "itemId": "inoutprice",
+                "labelWidth": 200,
+                "layout|anchor": "100%",
+                "name": "inoutprice"
+            },
+            "name": "MyNumberField",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "0eb2713f-cda0-4927-a923-14991cb8c9d4"
+        },
+        {
+            "type": "Ext.form.field.Date",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Ausgabetag*",
+                "format": "d.m.Y",
+                "itemId": "inoutdate",
+                "labelWidth": 200,
+                "layout|anchor": "100%",
+                "name": "inoutdate"
+            },
+            "name": "MyDateField",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "ce5a95f6-b462-46c4-9fc8-3df29d572fec"
+        },
+        {
+            "type": "Ext.form.field.Checkbox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "boxLabel": null,
+                "fieldLabel": "Gebucht*",
+                "inputValue": "1",
+                "labelWidth": 200,
+                "layout|anchor": "100%",
+                "name": "booked"
+            },
+            "name": "MyCheckbox",
+            "designerId": "0362b400-d2b7-493a-b3d3-54cbb681b10e"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|uiInterfaceName": "footer",
+                "dock": null,
+                "formBind": null,
+                "margin": "15 -10 0 -10",
+                "padding": null,
+                "ui": "footer"
+            },
+            "name": "MyToolbar3",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "363170f4-8882-4b24-9cc8-6270f99e1f0a",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": true,
+                        "iconCls": "fa fa-save",
+                        "itemId": "btn_save",
+                        "layout|flex": null,
+                        "style": [
+                            "{",
+                            "color:'white'",
+                            "}"
+                        ],
+                        "text": "Speichern"
+                    },
+                    "name": "MyButton9",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "c1aeacd8-c51c-427c-975b-02139575819e"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "fa fa-times",
+                        "itemId": "btn_cancel",
+                        "layout|flex": null,
+                        "style": [
+                            "{",
+                            "color:'white'",
+                            "}"
+                        ],
+                        "text": "Abbrechen"
+                    },
+                    "name": "MyButton10",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "5d5ac2fb-aef0-49d2-8168-a0986099df3e"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_ve9wv21p",
+        "includeInBundle": true,
+        "url": "ext\\packages\\ext-locale\\build\\ext-locale-de.js",
+        "x-compile": true
+    },
+    "name": "js",
+    "designerId": "5b043e6e-585a-40b9-be0a-16d62c06fd90"
+}

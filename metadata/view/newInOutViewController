@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "newinout",
+        "designer|userClassName": "newInOutViewController"
+    },
+    "designerId": "2c262dc5-befe-4f12-8ecd-c433e24812a6"
+}

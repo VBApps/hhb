@@ -1,0 +1,390 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "hhbMainController",
+        "designer|userClassName": "hhbMainController"
+    },
+    "name": "MyController",
+    "designerId": "fa380f8e-24d3-4618-aab0-c8869296eac6",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#myviewport",
+                "designer|targetType": "Ext.container.Viewport",
+                "fn": "onViewportAfterRender",
+                "implHandler": [
+                    "component.down('#logout').setText(uname+' abmelden');",
+                    "//$(\"#loading-mask\").hide();",
+                    "//$(\"#loading\").hide();"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onViewportAfterRender",
+            "designerId": "975f4900-0bed-4f0a-aa82-f6fe8856ff88"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#in_and_outputs",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnInOutputClick",
+                "implHandler": [
+                    "var viewport = button.up('viewport');",
+                    "var tabs = viewport.down('#tabpan');",
+                    "if (!tabs.getComponent('inoutputs')) {",
+                    "    tabs.add(Ext.widget('inoutputs', {",
+                    "        title: 'Ein- und Ausg&auml;nge',",
+                    "        closable: true,",
+                    "        iconCls: 'fa fa-exchange',",
+                    "        bodyStyle: 'background:#e6e6e6;'",
+                    "    }));",
+                    "}",
+                    "tabs.setActiveTab('inoutputs');",
+                    "Ext.getStore('inoutputsStore').load();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onBtnInOutputClick",
+            "designerId": "461c6aee-6b08-45ba-bdba-9200f78607ab"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#profil_edit",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnEditProfilClick",
+                "implHandler": [
+                    "var viewport = button.up('viewport');",
+                    "var tabs = viewport.down('#tabpan');",
+                    "if (!tabs.getComponent('editprofil')) {",
+                    "tabs.add(Ext.widget('editprofil', {",
+                    "    title: 'Profil editieren',",
+                    "    closable: true,",
+                    "    iconCls: 'fa fa-wrench',",
+                    "    bodyStyle: 'background:#e6e6e6;'",
+                    "}));",
+                    "}",
+                    "tabs.setActiveTab('editprofil');",
+                    "tabs.getComponent('editprofil').form.setValues(Ext.getStore('profileStore').getRange()[0].data);",
+                    "console.log(tabs.getComponent('editprofil'));"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onBtnEditProfilClick",
+            "designerId": "92ab13c1-484f-4eec-9740-f5a60255b9e4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#newinout",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnAddInOutClick",
+                "implHandler": [
+                    "var viewport = button.up('viewport');",
+                    "var tabs = viewport.down('#tabpan');",
+                    "if (!tabs.getComponent('newInOut')) {",
+                    "        tabs.add(Ext.widget('newInOut', {",
+                    "            title: 'Neuer Eintrag',",
+                    "            closable: true,",
+                    "            id: 'newInOut',",
+                    "            iconCls: 'fa fa-magic',",
+                    "            bodyStyle: 'background:#e6e6e6;'",
+                    "        }));",
+                    "}",
+                    "tabs.setActiveTab('newInOut');"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onBtnAddInOutClick",
+            "designerId": "54312fce-61ad-4cdb-a4bb-1a89a457f368"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#mybutton10",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnAddInOutCancelClick",
+                "implHandler": [
+                    "var form = button.up('form');",
+                    "form.reset();",
+                    "var viewp = button.up('viewport');",
+                    "var tabs = viewp.down('#tabpan');",
+                    "tabs.remove('newInOut');"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onBtnAddInOutCancelClick",
+            "designerId": "7545df7d-e558-40bf-b40b-ce336cdbfbeb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btn_cancel",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnCancelEditClick",
+                "implHandler": [
+                    "var form = button.up('form');",
+                    "form.reset();",
+                    "var viewp = button.up('viewport');",
+                    "var tabs = viewp.down('#tabpan');",
+                    "tabs.remove('editprofil');"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onBtnCancelEditClick",
+            "designerId": "2a36d27e-bdb0-4f7c-872a-90abdd603e12"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#newInOut",
+                "designer|targetType": "Ext.form.Panel",
+                "fn": "onFormNewInOutAfterRender",
+                "implHandler": [
+                    "component.down('#inoutdate').setValue(new Date());"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onFormNewInOutAfterRender",
+            "designerId": "3a44a6f7-0004-422c-b542-4cd2494067ba"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#logout",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnLogoutClick",
+                "implHandler": [
+                    "Ext.Ajax.request({",
+                    "    url:\"logout.php?logout=true\",",
+                    "    method: \"POST\",",
+                    "    params: JSON.stringify({",
+                    "        uname: uname",
+                    "    }),",
+                    "    success: function(){",
+                    "        window.location = \"../\";",
+                    "    },",
+                    "    failure: function(response, opts){",
+                    "        console.log(\"failed\");",
+                    "    },",
+                    "    headers: { 'Content-Type': 'application/json' }",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onBtnLogoutClick",
+            "designerId": "c3e8dfd7-c7ed-4fcb-b325-72e54b443e30"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#editprofil",
+                "designer|targetType": "Ext.form.Panel",
+                "fn": "onFormEditProfilAfterRender",
+                "implHandler": [
+                    "component.getForm().setValues(Ext.getStore('profileStore').data.items[0].getData().rows[0]);"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onFormEditProfilAfterRender",
+            "designerId": "8561157c-a1c4-4e87-8d08-a46ab26ceb14"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btn_save",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnSaveNewInOutClick",
+                "implHandler": [
+                    "console.log(button.up('form'));",
+                    "var form = button.up('form'),",
+                    "    store = Ext.getStore('inoutputsStore'),",
+                    "    record = form.getRecord(),",
+                    "    values = form.getValues();",
+                    "",
+                    "if (form.isValid()) {",
+                    "     if(!record) {",
+                    "                var values = form.getValues();",
+                    "                // create a new create",
+                    "                record = Ext.create(store.model, values);",
+                    "",
+                    "                if(store.getRootNode) {",
+                    "",
+                    "                    var node;",
+                    "",
+                    "                    if(!Ext.isEmpty(form.selectedNode)) {",
+                    "                        node = form.selectedNode;",
+                    "                    } else {",
+                    "                        node = store.getRootNode();",
+                    "                    }",
+                    "                    if (store.node) {",
+                    "                        node = store.node;",
+                    "                    }",
+                    "",
+                    "                    node.appendChild(record);",
+                    "",
+                    "                } else {",
+                    "",
+                    "                    store.add(record);",
+                    "                }",
+                    "",
+                    "            } else {",
+                    "                form.getForm().updateRecord(record);",
+                    "            }",
+                    "    store.sync();",
+                    "    var viewp = button.up('viewport');",
+                    "    var tabs = viewp.down('#tabpan');",
+                    "    tabs.remove('newInOut');",
+                    "    Ext.getStore('inoutputsStore').load();",
+                    "}"
+                ],
+                "name": "click"
+            },
+            "name": "onBtnSaveNewInOutClick",
+            "designerId": "c2a7f559-3184-4ea2-9abd-131f836a6b3d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#btnrefresh",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onBtnrefreshClick",
+                "implHandler": [
+                    "var grid = button.up('grid');",
+                    "grid.store.load();"
+                ],
+                "name": "click"
+            },
+            "name": "onBtnrefreshClick",
+            "designerId": "b0da1ce0-da94-418a-bff4-7655092768b0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#inoutputs",
+                "designer|params": [
+                    "dataview",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "onInoutputsItemDblClick",
+                "name": "itemdblclick"
+            },
+            "name": "onInoutputsItemDblClick",
+            "designerId": "002066b9-dce3-4dd2-8136-2ddd2d37416d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#inoutputs",
+                "designer|params": [
+                    "dataview",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "onInoutputsItemKeydown",
+                "name": "itemkeydown"
+            },
+            "name": "onInoutputsItemKeydown",
+            "designerId": "de0637dd-604d-4434-a329-601a23b4c2d5"
+        }
+    ]
+}

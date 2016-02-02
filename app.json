@@ -1,0 +1,78 @@
+{
+   "name": "hhb",
+   "indexHtmlPath": "index.html",
+   "overrides": "${app.dir}/overrides",
+   "framework": "ext",
+   "version": "1.0.0.0",
+   "theme": "theme-triton",
+   "toolkit": "classic",
+   "requires": [
+      "font-awesome"
+   ],
+   "sass": {
+      "namespace": "hhb"
+   },
+   "url": null,
+   "js": [
+      {
+         "path": "${ext.dir}/build/ext-all-rtl-debug.js"
+      },
+      {
+         "path": "ext\\packages\\ext-locale\\build\\ext-locale-de.js",
+         "x-compile": true,
+         "includeInBundle": true
+      },
+      {
+         "path": "app.js",
+         "bundle": true
+      }
+   ],
+   "css": [
+      {
+         "path": "bootstrap.css",
+         "bootstrap": true
+      },
+      {
+         "path": "resources/style.css"
+      }
+   ],
+   "production": {},
+   "testing": {},
+   "development": {},
+   "bootstrap": {
+      "base": "${app.dir}",
+      "manifest": "bootstrap.json",
+      "microloader": "bootstrap.js",
+      "css": "bootstrap.css"
+   },
+   "classpath": [
+      "app",
+      "${toolkit.name}/src"
+   ],
+   "output": {
+      "base": "${workspace.build.dir}/${build.environment}/${app.name}"
+   },
+   "appCache": {
+      "cache": [
+         "index.html"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [],
+   "ignore": [
+      "(^|/)CVS(/?$|/.*?$)"
+   ],
+   "archivePath": "archive",
+   "slicer": {
+      "js": [
+         {
+            "path": "${app.dir}/sass/example/custom.js",
+            "isWidgetManifest": true
+         }
+      ]
+   },
+   "id": "3d8db210-0e75-4d4d-996f-ee2bab9eac56"
+}

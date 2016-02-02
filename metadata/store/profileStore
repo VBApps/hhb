@@ -1,0 +1,62 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "profileStore",
+        "designer|userClassName": "profileStore",
+        "model": "profileModel",
+        "storeId": "profileStore"
+    },
+    "name": "MyStore",
+    "designerId": "6603610d-81cf-4ca5-9737-e6ea13d5fa26",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "read: 'querys.php?getProfile',",
+                    "update: 'querys.php?updateProfile'",
+                    "}"
+                ],
+                "url": "querys.php"
+            },
+            "name": "MyAjaxProxy1",
+            "designerId": "1f763f09-d155-4da7-b5bf-7cb631fd168a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader1",
+                    "designerId": "571fdcaf-1129-4e3d-bebc-3c5c2e29ec6c"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "writeAllFields": true
+                    },
+                    "name": "MyJsonWriter1",
+                    "designerId": "e8b984b5-4f4a-4d1e-8729-ca70db3a1eee"
+                }
+            ]
+        }
+    ]
+}
